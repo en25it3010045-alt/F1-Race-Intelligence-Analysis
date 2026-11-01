@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formula 1 Race Intelligence</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="noise"></div>
+
+<nav>
+  <a class="brand" href="#home">F1<span>IQ</span></a>
+  <div class="navlinks">
+    <a href="#home">HOME</a><a href="#project">PROJECT</a><a href="#scenarios">SCENARIOS</a>
+    <a href="#dashboard">DATA</a><a href="#insights">INSIGHTS</a>
+  </div>
+</nav>
+
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">DATA ANALYTICS • TABLEAU • FORMULA 1</p>
+    <h1>FORMULA 1<br><span>RACE INTELLIGENCE</span></h1>
+    <p class="lead">A data-driven exploration of Formula 1 performance across 334 Grand Prix rounds, covering drivers, teams, tyre strategy, reliability and global racing patterns.</p>
+    <div class="actions">
+      <a class="btn red" href="#dashboard">EXPLORE THE DATA</a>
+      <a class="btn dark" href="#project">VIEW PROJECT</a>
+    </div>
+  </div>
+  <div class="hero-data">
+    <div class="hud"><span>DATASET STATUS</span><b>ANALYSIS READY</b></div>
+    <div class="big-number">F1</div>
+    <div class="track"></div>
+  </div>
+</section>
+
+<section class="kpi-strip">
+  <div><b id="kpiRounds"></b><span>GRAND PRIX ROUNDS</span></div>
+  <div><b id="kpiTeams"></b><span>TEAMS ANALYSED</span></div>
+  <div><b id="kpiSeasons"></b><span>SEASONS COVERED</span></div>
+  <div><b id="kpiDrivers"></b><span>DRIVERS TRACKED</span></div>
+</section>
+
+<section id="project" class="section intro">
+  <div class="section-title"><p>01 / PROJECT OVERVIEW</p><h2>TURNING RACE DATA<br>INTO <span>INTELLIGENCE.</span></h2></div>
+  <div class="copy-grid">
+    <article><h3>The Problem</h3><p>Formula 1 performance information is spread across seasons, drivers, teams, circuits and race outcomes. Looking at these dimensions separately makes consistent comparison difficult.</p></article>
+    <article><h3>The Approach</h3><p>This project transforms the supplied race dataset into visual analytics that allow users to compare performance, identify trends and understand strategic and reliability patterns.</p></article>
+    <article><h3>The Outcome</h3><p>The website presents the same analytical story through data-driven visualisations built from the project dataset and designed to support clear, evidence-based insights.</p></article>
+  </div>
+</section>
+
+<section id="scenarios" class="section scenario-section">
+  <div class="section-title"><p>02 / USER SCENARIOS</p><h2>THREE WAYS TO<br>READ THE <span>RACE.</span></h2></div>
+  <div class="scenario-grid">
+    <article class="scenario"><span>SCENARIO 01</span><h3>TEAM PERFORMANCE STRATEGIST</h3><p>Benchmarks championship performance, compares team points and explores tyre strategy patterns.</p><strong>🏆</strong></article>
+    <article class="scenario"><span>SCENARIO 02</span><h3>BROADCAST ANALYST</h3><p>Explores driver rankings, leading competitors and the global distribution of Formula 1 events.</p><strong>🎙️</strong></article>
+    <article class="scenario"><span>SCENARIO 03</span><h3>TECHNICAL REGULATION ANALYST</h3><p>Investigates Did Not Finish patterns and compares driver reliability across the racing dataset.</p><strong>⚙️</strong></article>
+  </div>
+</section>
+
+<section id="dashboard" class="section data-section">
+  <div class="section-title"><p>03 / DATA VISUALISATION</p><h2>RACE INTELLIGENCE<br><span>DASHBOARD.</span></h2><small>All chart values below are generated from the supplied Formula 1 project dataset.</small></div>
+
+  <div class="dashboard-grid">
+    <article class="panel wide"><div class="panel-head"><span>01</span><h3>CHAMPIONSHIP PERFORMANCE</h3></div><canvas id="championshipChart"></canvas></article>
+    <article class="panel"><div class="panel-head"><span>02</span><h3>STARTING TYRE COMPOUND USAGE</h3></div><canvas id="tyreChart"></canvas></article>
+    <article class="panel"><div class="panel-head"><span>03</span><h3>TOP 10 DRIVER PERFORMANCE</h3></div><canvas id="driverChart"></canvas></article>
+    <article class="panel"><div class="panel-head"><span>04</span><h3>TEAM PERFORMANCE RANKING</h3></div><canvas id="teamChart"></canvas></article>
+    <article class="panel"><div class="panel-head"><span>05</span><h3>DRIVER RELIABILITY ANALYSIS</h3></div><canvas id="reliabilityChart"></canvas></article>
+    <article class="panel wide"><div class="panel-head"><span>06</span><h3>GRAND PRIX GEOGRAPHIC DISTRIBUTION</h3></div><canvas id="geoChart"></canvas></article>
+    <article class="panel"><div class="panel-head"><span>07</span><h3>RACE WEATHER DISTRIBUTION</h3></div><canvas id="weatherChart"></canvas></article>
+    <article class="panel"><div class="panel-head"><span>08</span><h3>SEASON DRIVER LEADER TREND</h3></div><canvas id="driverTrendChart"></canvas></article>
+    <article class="panel"><div class="panel-head"><span>09</span><h3>DATASET COVERAGE</h3><div class="coverage"><b id="coverageCircuits"></b><span>CIRCUITS IN THE RACE RESULTS</span><b id="coverageRaces"></b><span>UNIQUE GRAND PRIX ROUNDS</span><b id="coverageSeasons"></b><span>SEASONS OF DATA</span></div></article>
+  </div>
+</section>
+
+<section id="insights" class="section insights">
+  <div class="section-title"><p>04 / KEY INSIGHTS</p><h2>WHAT THE DATA<br><span>HELPS SOLVE.</span></h2></div>
+  <div class="insight-list">
+    <div><b>01</b><p><strong>Championship intelligence:</strong> reveals which teams lead each season and how the points benchmark changes over time.</p></div>
+    <div><b>02</b><p><strong>Competitive performance:</strong> ranks drivers and teams using accumulated race points from the dataset.</p></div>
+    <div><b>03</b><p><strong>Strategy and reliability:</strong> compares starting tyre compounds and highlights which drivers have the strongest finish reliability.</p></div>
+    <div><b>04</b><p><strong>Global context:</strong> shows how Formula 1 rounds are distributed across host countries.</p></div>
+  </div>
+</section>
+
+<section class="final">
+  <p>FORMULA 1 RACE INTELLIGENCE ANALYSIS</p>
+  <h2>DATA.<br><span>SPEED.</span><br>INSIGHT.</h2>
+  <small>Built from the supplied project dataset • Designed for the Formula 1 analytics project</small>
+</section>
+
+<footer>FORMULA 1 RACE INTELLIGENCE • DATA ANALYTICS PROJECT</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
